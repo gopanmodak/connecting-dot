@@ -3,6 +3,8 @@ import MainLayout from "./MainLayout/MainLayout";
 import Home from "./Pages/Home";
 import Portfolio from "./Pages/Portfolio";
 import Services from "./Pages/Services";
+import RefundPolicy from "./Pages/RefundPolicy";
+import TermsandConditions from "./Pages/TermsandConditions";
 
 export const router =createBrowserRouter([
     {
@@ -21,7 +23,16 @@ export const router =createBrowserRouter([
             {
                 path:'services',
                 element:<Services/>
+            },
+            {
+                path:'refund-policy',
+                element:<RefundPolicy/>
+            },
+            {
+                path:'terms-and-conditions',
+                element:<TermsandConditions/>
             }
+
         ]
     }
    

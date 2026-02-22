@@ -50,7 +50,7 @@ const TestimonialSection = () => {
 
         {/* Heading */}
         <h2 className="text-4xl md:text-6xl font-bold mb-16">
-          What our <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">Clients Think About Us</span>
+          What our <span className="bg-linear-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">Clients Think About Us</span>
         </h2>
 
         {/* Testimonial Card */}
