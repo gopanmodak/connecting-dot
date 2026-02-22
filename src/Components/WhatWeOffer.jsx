@@ -15,7 +15,7 @@ const WhatWeOffer = () => {
       <div className="max-w-6xl mx-auto">
 
         <div className="flex items-center gap-4 mb-6">
-          <div className="w-20 h-[2px] bg-white"></div>
+          <div className="w-20 h-0.5 bg-white"></div>
           <p className="text-sm text-gray-400 tracking-widest">
             What We Offer
           </p>

@@ -8,7 +8,7 @@ const LearnWhy = () => {
         
         {/* Top Small Line */}
         <div className="flex items-center gap-4 mb-6">
-          <div className="w-24 h-[2px] bg-gradient-to-r from-purple-500 to-cyan-400"></div>
+          <div className="w-24 h-0.5 bg-linear-to-r from-purple-500 to-cyan-400"></div>
           <p className="text-sm tracking-widest text-gray-400">
             Empowering innovation
           </p>
