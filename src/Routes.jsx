@@ -5,11 +5,14 @@ import Portfolio from "./Pages/Portfolio";
 import Services from "./Pages/Services";
 import RefundPolicy from "./Pages/RefundPolicy";
 import TermsandConditions from "./Pages/TermsandConditions";
+import ScrollToTop from "./Components/ScrollToTop";
 
 export const router =createBrowserRouter([
+   
     {
         path:'/',
-        element:<MainLayout/>,
+        
+        element:<> <MainLayout/>,<ScrollToTop/></>,
         children:[
 
             {
