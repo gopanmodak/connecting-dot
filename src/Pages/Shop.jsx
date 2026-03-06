@@ -3,12 +3,13 @@ import products from "../../public/products .json";
 import { ShoppingCart, StarIcon, Filter } from "lucide-react";
 import { Link } from "react-router-dom";
 import { CartContext } from "../Contex/CartContext";
+import { toast } from "react-toastify";
 
 const parsePriceRange = (range) => {
   const numbers = range.match(/\d+/g);
   if (!numbers) return [0, 0];
   // Remove commas if present and convert to numbers
-  return numbers.map(n => Number(n.replace(/,/g, ''))); 
+  return numbers.map((n) => Number(n.replace(/,/g, "")));
 };
 
 const Shop = () => {
@@ -17,7 +18,8 @@ const Shop = () => {
   const { addToCart } = useContext(CartContext);
 
   const filteredProducts = products.filter((product) => {
-    const categoryMatch = selectedCategory === "All" || product.category === selectedCategory;
+    const categoryMatch =
+      selectedCategory === "All" || product.category === selectedCategory;
     const [minPrice, maxPrice] = parsePriceRange(product.priceRange);
     let priceMatch = true;
 
@@ -38,14 +40,15 @@ const Shop = () => {
 
   return (
     <div className="bg-linear-to-r from-black via-[#140018] to-[#2a003a] text-white py-10 md:py-20 px-4 md:px-16 flex flex-col md:flex-row gap-10">
-      
       {/* Sidebar - Mobile-e width full thakbe */}
       <div className="w-full md:w-64 p-4 rounded-lg h-fit bg-[#1a0024] md:bg-transparent">
         <h2 className="font-bold mb-5 text-lg flex gap-3 items-center pb-2 border-b border-gray-700 md:border-none">
           <Filter className="h-5 w-5 text-purple-400" /> Filters
         </h2>
-        
-        <h2 className="font-bold mb-3 text-md text-gray-300 uppercase tracking-wider">Categories</h2>
+
+        <h2 className="font-bold mb-3 text-md text-gray-300 uppercase tracking-wider">
+          Categories
+        </h2>
         <ul className="flex flex-wrap md:flex-col gap-3 md:space-y-2 mb-8 cursor-pointer">
           {["All", "OTT", "Music", "Software"].map((cat) => (
             <li
@@ -62,7 +65,9 @@ const Shop = () => {
           ))}
         </ul>
 
-        <h2 className="font-bold mb-3 text-md text-gray-300 uppercase tracking-wider">Price Range</h2>
+        <h2 className="font-bold mb-3 text-md text-gray-300 uppercase tracking-wider">
+          Price Range
+        </h2>
         <div className="grid grid-cols-2 md:grid-cols-1 gap-3">
           {[
             { label: "0 - 300", value: "0-300" },
@@ -108,19 +113,24 @@ const Shop = () => {
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                 </figure>
-                
+
                 <div className="p-5 space-y-3">
                   <h2 className="font-bold text-lg leading-tight h-12 overflow-hidden">
                     {product.title}
                   </h2>
-                  
+
                   <div className="flex items-center gap-2">
                     <div className="flex">
                       {[...Array(5)].map((_, i) => (
-                        <StarIcon key={i} className="text-[#FF9500] fill-[#FF9500] w-3 h-3" />
+                        <StarIcon
+                          key={i}
+                          className="text-[#FF9500] fill-[#FF9500] w-3 h-3"
+                        />
                       ))}
                     </div>
-                    <span className="text-md font-bold text-gray-400">{product.rating}</span>
+                    <span className="text-md font-bold text-gray-400">
+                      {product.rating}
+                    </span>
                   </div>
 
                   <p className="text-xl font-extrabold text-white">
@@ -128,11 +138,19 @@ const Shop = () => {
                   </p>
 
                   <div className="flex items-center gap-3 p-2">
-                    <Link to={`/product/${product.id}`}className="flex-1 bg-black text-white font-bold p-2 border border-gray-700 rounded-lg hover:bg-red-200 transition-colors text-sm">
+                    <Link
+                      to={`/product/${product.id}`}
+                      className="flex-1 bg-black text-white font-bold p-2 border border-gray-700 rounded-lg hover:bg-red-200 transition-colors text-sm"
+                    >
                       Choose Option
                     </Link>
-                    <div onClick={() => addToCart(product, 1)}
-className="p-2 border border-gray-700 rounded-lg hover:bg-white hover:text-black transition-all cursor-pointer">
+                    <div
+                      onClick={() => {
+                        addToCart(product, 1);
+                        toast.success(`${product.title} added to cart! 🛒`);
+                      }}
+                      className="p-2 border border-gray-700 rounded-lg hover:bg-white hover:text-black transition-all cursor-pointer"
+                    >
                       <ShoppingCart size={20} />
                     </div>
                   </div>
@@ -142,7 +160,12 @@ className="p-2 border border-gray-700 rounded-lg hover:bg-white hover:text-black
           ) : (
             <div className="col-span-full text-center py-20 bg-black/20 rounded-2xl border border-dashed border-gray-700">
               <p className="text-gray-500">No products found in this range.</p>
-              <button onClick={resetFilters} className="text-purple-400 underline mt-2">Try resetting filters</button>
+              <button
+                onClick={resetFilters}
+                className="text-purple-400 underline mt-2"
+              >
+                Try resetting filters
+              </button>
             </div>
           )}
         </div>
