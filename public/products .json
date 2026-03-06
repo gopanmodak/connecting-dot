@@ -1,0 +1,94 @@
+[
+  {
+    "id": 1,
+    "title": "Crunchyroll Subscription",
+    "category": "OTT",
+    "priceRange": "BDT 290 - 1,500",
+    "rating": 5.0,
+    "image": "https://www.fanflixbd.com/cdn/shop/files/Crunchyroll-subscription_in-bangladesh.jpg?v=1769925121",
+    "brand": "Crunchyroll",
+    "description": "Watch thousands of anime episodes ad-free with Crunchyroll premium subscription.",
+    "features": [
+      "Unlimited Anime Streaming",
+      "HD Quality",
+      "Multiple Devices",
+      "No Ads"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Netflix Subscription",
+    "category": "OTT",
+    "priceRange": "BDT 350 - 1,200",
+    "rating": 4.8,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTALViVnQFGlQ-K8qJ2-SX_VH7lCC_CowdQw&s",
+    "brand": "Netflix",
+    "description": "Watch movies, TV shows, and Netflix originals anytime.",
+    "features": [
+      "HD & 4K Streaming",
+      "Multiple Profiles",
+      "Watch Anywhere",
+      "No Ads"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Disney+ Subscription",
+    "category": "OTT",
+    "priceRange": "BDT 300 - 1,000",
+    "rating": 4.7,
+    "image": "https://zamve.com/wp-content/uploads/2021/03/Disney-Plus-Subscription-from-Zmave-Online-Subscription-Shop-BD-by-zamve.com_.jpg",
+    "brand": "Disney+",
+    "description": "Enjoy Disney, Marvel, Star Wars, Pixar, and National Geographic content.",
+    "features": [
+      "Family Friendly Content",
+      "HD Streaming",
+      "Download Offline"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Amazon Prime Video",
+    "category": "OTT",
+    "priceRange": "BDT 250 - 900",
+    "rating": 4.6,
+    "image": "https://i.pcmag.com/imagery/reviews/02disbivpmvtmexkrkxwy0w-13-hero-image-gallery.fit_lim.size_1200x630.v1582749138.png",
+    "brand": "Amazon",
+    "description": "Watch award-winning Amazon Originals and popular movies.",
+    "features": [
+      "Prime Originals",
+      "HD Streaming",
+      "Multiple Devices"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Spotify Premium",
+    "category": "Music",
+    "priceRange": "BDT 120 - 500",
+    "rating": 4.9,
+    "image": "https://static.gamsgocdn.com/image/660d6cfe558298f6612d03ba344c2d0e.jpg",
+    "brand": "Spotify",
+    "description": "Listen to music without ads and download songs offline.",
+    "features": [
+      "Ad Free Music",
+      "Offline Download",
+      "Unlimited Skips"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "YouTube Premium",
+    "category": "OTT",
+    "priceRange": "BDT 200 - 700",
+    "rating": 4.7,
+    "image": "https://static0.xdaimages.com/wordpress/wp-content/uploads/2019/11/YouTube-Premium-featured.jpg?w=1200&h=628&fit=crop",
+    "brand": "YouTube",
+    "description": "Enjoy YouTube without ads and background play.",
+    "features": [
+      "Ad Free Videos",
+      "Background Play",
+      "Offline Download"
+    ]
+  }
+]

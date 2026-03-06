@@ -9,8 +9,7 @@ import WhatWeOffer from "../Components/WhatWeOffer";
 import SkillSetSection from "../Components/SkillSetSection";
 import StackSection from "../Components/StackSection";
 import TestimonialSection from "../Components/TestimonialSection";
-import ContactSection from "../Components/ContactSection";
-import FullSection from "../Components/FullSection";
+
 
 const Home = () => {
   return (
@@ -154,8 +153,7 @@ const Home = () => {
         <SkillSetSection />
         <StackSection />
         <TestimonialSection />
-        <ContactSection />
-        <FullSection />
+        
       </div>
     </div>
   );

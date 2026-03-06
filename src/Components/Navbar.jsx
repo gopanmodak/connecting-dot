@@ -1,52 +1,80 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import logo from "../assets/Logo (1).png";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { HiMenu, HiX } from "react-icons/hi";
+import { MoveRight, Search, ShoppingBag, TicketPercent, UserRound } from "lucide-react";
+import { CartContext } from "../Contex/CartContext";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const { cart } = useContext(CartContext);
+
+  // Active Link Style Helper
+  const navStyle = ({ isActive }) => 
+    isActive ? "text-cyan-400 font-bold border-b-2 border-cyan-400 pb-1" : "hover:text-cyan-400 transition-all";
 
   return (
-    <div className="bg-black text-white fixed w-full top-0 left-0 z-50 shadow-md">
-      
+   <div>
+     
+     <nav className="bg-black text-white fixed w-full top-0 left-0 z-100 shadow-xl border-b border-gray-900">
+      <p className="bg-[#141718] text-sm text-center py-3 flex items-center justify-center gap-3"><TicketPercent />30% off storewide — Limited time! <Link to="/shop" className="flex text-cyan-400 items-center gap-2 border-b border-cyan-400 pb-1">Shop Now <MoveRight /></Link></p>
       {/* Navbar Container */}
-      <div className="flex justify-between items-center px-6 md:px-16 py-4">
+      <div className="max-w-7xl mx-auto flex justify-between items-center px-6 md:px-10 py-4">
         
         {/* Logo */}
-        <img src={logo} alt="logo" className="w-40 md:w-52" />
+        <Link to="/">
+          <img src={logo} alt="logo" className="w-32 md:w-44 object-contain" />
+        </Link>
 
-        {/* Desktop Menu */}
-        <div className="hidden md:flex gap-10 items-center">
-          <NavLink to="/" className="hover:text-cyan-400">Home</NavLink>
-          <NavLink to="/portfolio" className="hover:text-cyan-400">Portfolio</NavLink>
-          <NavLink to="/services" className="hover:text-cyan-400">Services</NavLink>
-          <button className="btn btn-primary rounded-full">
-            Get In Touch
-          </button>
+        {/* Desktop Central Menu */}
+        <div className="hidden md:flex gap-8 items-center text-sm uppercase tracking-widest font-medium">
+          <NavLink to="/" className={navStyle}>Home</NavLink>
+          <NavLink to="/shop" className={navStyle}>Shop</NavLink>
+          <NavLink to="/contact" className={navStyle}>Contact Us</NavLink>
         </div>
 
-        {/* Mobile Hamburger */}
-        <div className="md:hidden">
-          {open ? (
-            <HiX size={28} onClick={() => setOpen(false)} />
-          ) : (
-            <HiMenu size={28} onClick={() => setOpen(true)} />
-          )}
+        {/* Right Side Icons & CTA */}
+        <div className="flex items-center gap-4 md:gap-6">
+          {/* Icons Group */}
+          <div className="flex items-center gap-4">
+            <button className="hover:text-cyan-400 transition-colors">
+              <Search size={22} />
+            </button>
+            <Link to="/login" className="p-1 border border-gray-600 rounded-full hover:border-cyan-400 transition-all">
+              <UserRound size={20} />
+            </Link>
+            <Link to="/cart" className="relative hover:text-cyan-400 transition-colors">
+              <ShoppingBag size={22} />
+              {/* Badge Example */}
+              <span className="absolute -top-1 -right-2 bg-emerald-700 text-[15px] rounded-full px-1">{cart.length}</span>
+            </Link>
+          </div>
+
+          {/* Desktop Button */}
+          
+          {/* Mobile Hamburger Toggle */}
+          <div className="md:hidden flex items-center">
+            {open ? (
+              <HiX size={30} className="cursor-pointer text-cyan-400" onClick={() => setOpen(false)} />
+            ) : (
+              <HiMenu size={30} className="cursor-pointer" onClick={() => setOpen(true)} />
+            )}
+          </div>
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      {open && (
-        <div className="md:hidden bg-black px-6 pb-6 flex flex-col gap-6 text-center">
-          <NavLink to="/" onClick={() => setOpen(false)}>Home</NavLink>
-          <NavLink to="/portfolio" onClick={() => setOpen(false)}>Portfolio</NavLink>
-          <NavLink to="/services" onClick={() => setOpen(false)}>Services</NavLink>
-          <button className="btn btn-primary rounded-full w-full">
-            Get In Touch
-          </button>
+      {/* Mobile Menu (Animated Overlay) */}
+      <div className={`absolute top-full left-0 w-full bg-black/95 backdrop-blur-md transition-all duration-300 ease-in-out ${open ? "opacity-100 visible h-screen" : "opacity-0 invisible h-0"} md:hidden`}>
+        <div className="flex flex-col items-center gap-8 pt-10 text-xl font-semibold">
+          <NavLink to="/" onClick={() => setOpen(false)} className={navStyle}>Home</NavLink>
+          <NavLink to="/shop" onClick={() => setOpen(false)} className={navStyle}>Shop</NavLink>
+          <NavLink to="/contact" onClick={() => setOpen(false)} className={navStyle}>Contact Us</NavLink>
+          
+          
         </div>
-      )}
-    </div>
+      </div>
+    </nav>
+   </div>
   );
 };
 

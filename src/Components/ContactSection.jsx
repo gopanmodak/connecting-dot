@@ -3,83 +3,78 @@ import React from "react";
 const ContactSection = () => {
   return (
     <section className="bg-black text-white py-20 px-6 md:px-16">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         
         {/* Top Line & Label */}
-        <div className="flex items-center gap-4 mb-6">
-          <div className="w-16 h-[1px] bg-white"></div>
-          <p className="text-sm text-gray-400 tracking-widest uppercase font-medium">
+        <div className="flex items-center gap-4 mb-4">
+          <div className="w-16 h-[2px] bg-white"></div>
+          <p className="text-lg font-bold">
             What We Offer
           </p>
         </div>
 
-        {/* Heading */}
-        <h2 className="text-4xl md:text-6xl font-bold mb-6">
-          <span className="bg-linear-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+        {/* Heading with Gradient */}
+        <h2 className="text-5xl md:text-6xl font-extrabold mb-8">
+          <span className="bg-linear-to-r from-[#44D7FD] via-[#B249F8] to-[#FF4694] bg-clip-text text-transparent">
             Let’s Touch Base
           </span>
         </h2>
 
         {/* Description */}
-        <p className="max-w-3xl text-gray-400 text-lg mb-16 leading-relaxed">
+        <p className="max-w-4xl text-gray-300 text-lg mb-20 leading-relaxed">
           Ready to take the next step? Contact Ontik Technology today to discuss your project requirements and discover how we can provide tailored solutions to meet your needs. We are here to understand your unique challenges, offer expert advice, and empower your business for success.
         </p>
 
         {/* Form */}
-        <form className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+        <form className="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-10">
           
           {/* Full Name */}
-          <div className="flex flex-col gap-2">
-            <label className="text-sm font-semibold tracking-wide">Full Name</label>
+          <div className="flex flex-col gap-4">
+            <label className="text-xl font-bold tracking-tight">Full Name</label>
             <input 
               type="text" 
-              className="bg-transparent border-b border-gray-700 py-3 outline-none focus:border-purple-500 transition-colors"
-              placeholder="Your Name"
+              className="bg-transparent border-b border-gray-600 pb-3 outline-none focus:border-white transition-all text-lg"
             />
           </div>
 
           {/* Email Address */}
-          <div className="flex flex-col gap-2">
-            <label className="text-sm font-semibold tracking-wide">Email Address</label>
+          <div className="flex flex-col gap-4">
+            <label className="text-xl font-bold tracking-tight">Email Address</label>
             <input 
               type="email" 
-              className="bg-transparent border-b border-gray-700 py-3 outline-none focus:border-purple-500 transition-colors"
-              placeholder="Your Email"
+              className="bg-transparent border-b border-gray-600 pb-3 outline-none focus:border-white transition-all text-lg"
             />
           </div>
 
           {/* Company */}
-          <div className="flex flex-col gap-2">
-            <label className="text-sm font-semibold tracking-wide">Company</label>
+          <div className="flex flex-col gap-4">
+            <label className="text-xl font-bold tracking-tight">Company</label>
             <input 
               type="text" 
-              className="bg-transparent border-b border-gray-700 py-3 outline-none focus:border-purple-500 transition-colors"
-              placeholder="Your Company Name"
+              className="bg-transparent border-b border-gray-600 pb-3 outline-none focus:border-white transition-all text-lg"
             />
           </div>
 
           {/* Phone Number */}
-          <div className="flex flex-col gap-2">
-            <label className="text-sm font-semibold tracking-wide">Phone Number</label>
+          <div className="flex flex-col gap-4">
+            <label className="text-xl font-bold tracking-tight">Phone Number</label>
             <input 
               type="tel" 
-              className="bg-transparent border-b border-gray-700 py-3 outline-none focus:border-purple-500 transition-colors"
-              placeholder="Your Phone Number"
+              className="bg-transparent border-b border-gray-600 pb-3 outline-none focus:border-white transition-all text-lg"
             />
           </div>
 
-          {/* Message / Project Description */}
-          <div className="flex flex-col gap-2 md:col-span-2">
-            <label className="text-sm font-semibold tracking-wide">Briefly Describe Your Project</label>
+          {/* Briefly Describe Your Project */}
+          <div className="flex flex-col gap-4 md:col-span-2 mt-4">
+            <label className="text-xl font-bold tracking-tight">Briefly Describe Your Project</label>
             <input 
               type="text" 
-              className="bg-transparent border-b border-gray-700 py-3 outline-none focus:border-purple-500 transition-colors"
-              placeholder="Tell us a bit about your project"
+              className="bg-transparent border-b border-gray-600 pb-3 outline-none focus:border-white transition-all text-lg w-full"
             />
           </div>
 
-          {/* Gradient Button */}
-          <div className="md:col-span-2 mt-8">
+          {/* Image-e button nei, kintu submit handle korar jonno niche button add korte paren */}
+           <div className="md:col-span-2 mt-8">
             <button 
               type="submit" 
               className="px-10 py-4 rounded-full bg-gradient-to-r from-[#2189bd] via-[#8e44ad] to-[#d633ff] font-bold text-white hover:scale-105 transition-transform duration-300 shadow-lg shadow-purple-500/20"
@@ -87,7 +82,6 @@ const ContactSection = () => {
               Get In Touch
             </button>
           </div>
-
         </form>
       </div>
     </section>
