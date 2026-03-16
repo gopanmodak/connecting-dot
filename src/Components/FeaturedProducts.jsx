@@ -51,7 +51,7 @@ const FeaturedProducts = () => {
         {/* Slider */}
         <div
           ref={sliderRef}
-          className="flex gap-6 overflow-x-auto scrollbar-hide h-110"
+          className="min-h-103  flex gap-6 overflow-x-auto scrollbar-hide md:h-110"
         >
           {products.map((product) => (
             <div

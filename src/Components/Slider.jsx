@@ -22,20 +22,6 @@ const slides = [
     heading: "STREAMING",
     subtitle: "Entertainment",
   },
-  {
-    id: 4,
-    image: "https://www.thetechedvocate.org/wp-content/uploads/2023/07/Best-streaming-services-660x400.webp",
-    title: "Music & Movies",
-    heading: "ALL ACCESS",
-    subtitle: "One Platform",
-  },
-  {
-    id: 5,
-    image: "https://tse1.mm.bing.net/th/id/OIP.UUgPVPSFDStjLCUbFi6MWwHaE5?rs=1&pid=ImgDetMain&o=7&rm=3",
-    title: "Premium",
-    heading: "MEMBERSHIP",
-    subtitle: "Start Today",
-  },
 ];
 
 const HeroSlider = () => {
@@ -58,7 +44,7 @@ const HeroSlider = () => {
   };
 
   return (
-    <div className="relative w-full mt-10 h-[520px] overflow-hidden">
+    <div className="relative w-full mt-6 h-[620px] md:h-[520px] overflow-hidden">
 
       {/* Background */}
       <img
@@ -67,106 +53,94 @@ const HeroSlider = () => {
         className="absolute w-full h-full object-cover"
       />
 
-      {/* Dark overlay */}
+      {/* Overlay */}
       <div className="absolute inset-0 bg-black/70"></div>
 
       {/* Content */}
-      <div className="relative z-10 flex items-center justify-between h-full max-w-7xl mx-auto px-8 text-white">
+      <div className="relative z-10 flex flex-col md:flex-row items-center justify-center md:justify-between h-full max-w-7xl mx-auto px-4 md:px-8 text-white gap-10">
 
-        {/* LEFT OTT BOXES */}
-<div className="space-y-8">
+        {/* OTT BOXES */}
+        <div className="space-y-6 w-full md:w-auto">
 
-  {/* OTT CARDS */}
-  <div className="grid grid-cols-2 gap-6 max-w-xl">
+          {/* OTT CARDS */}
+          <div className="grid grid-cols-2 gap-4 md:gap-6">
 
-    {/* Netflix */}
-    <div className="flex items-center gap-3 bg-red-900/40 border border-red-500 rounded-xl px-6 py-4 hover:bg-red-800/40 transition">
-      <img
-        src="https://upload.wikimedia.org/wikipedia/commons/7/75/Netflix_icon.svg"
-        className="w-8"
-        alt=""
-      />
-      <h2 className="text-white text-xl font-semibold">NETFLIX</h2>
-    </div>
+            <div className="flex items-center gap-2 bg-red-900/40 border border-red-500 rounded-xl px-3 py-3 md:px-6 md:py-4">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/7/75/Netflix_icon.svg"
+                className="w-6 md:w-8"
+                alt=""
+              />
+              <h2 className="text-sm md:text-xl font-semibold">NETFLIX</h2>
+            </div>
 
-    {/* Prime */}
-    <div className="flex items-center gap-3 bg-red-900/40 border border-red-500 rounded-xl px-6 py-4 hover:bg-red-800/40 transition">
-      <img
-        src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Prime_Video.png"
-        className="w-8"
-        alt=""
-      />
-      <h2 className="text-white text-xl font-semibold">Prime Video</h2>
-    </div>
+            <div className="flex items-center gap-2 bg-red-900/40 border border-red-500 rounded-xl px-3 py-3 md:px-6 md:py-4">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Prime_Video.png"
+                className="w-6 md:w-8"
+                alt=""
+              />
+              <h2 className="text-sm md:text-xl font-semibold">Prime</h2>
+            </div>
 
-    {/* Spotify */}
-    <div className="flex items-center gap-3 bg-red-900/40 border border-red-500 rounded-xl px-6 py-4 hover:bg-red-800/40 transition">
-      <img
-        src="https://upload.wikimedia.org/wikipedia/commons/8/84/Spotify_icon.svg"
-        className="w-8"
-        alt=""
-      />
-      <h2 className="text-green-400 text-xl font-semibold">Spotify</h2>
-    </div>
+            <div className="flex items-center gap-2 bg-red-900/40 border border-red-500 rounded-xl px-3 py-3 md:px-6 md:py-4">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/8/84/Spotify_icon.svg"
+                className="w-6 md:w-8"
+                alt=""
+              />
+              <h2 className="text-green-400 text-sm md:text-xl font-semibold">
+                Spotify
+              </h2>
+            </div>
 
-    {/* Youtube */}
-    <div className="flex items-center gap-3 bg-red-900/40 border border-red-500 rounded-xl px-6 py-4 hover:bg-red-800/40 transition">
-      <img
-        src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png"
-        className="w-8"
-        alt=""
-      />
-      <h2 className="text-white text-xl font-semibold">Premium</h2>
-    </div>
+            <div className="flex items-center gap-2 bg-red-900/40 border border-red-500 rounded-xl px-3 py-3 md:px-6 md:py-4">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png"
+                className="w-6 md:w-8"
+                alt=""
+              />
+              <h2 className="text-sm md:text-xl font-semibold">Premium</h2>
+            </div>
+          </div>
 
-  </div>
+          {/* FEATURES */}
+          <div className="flex justify-center md:justify-start gap-6 md:gap-10 text-center pt-4">
 
+            <div>
+              <div className="text-xl md:text-3xl mb-1">✔</div>
+              <p className="text-xs md:text-sm">Authentic</p>
+            </div>
 
-  {/* MORE TEXT */}
-  <p className="text-gray-300 text-center">More......</p>
+            <div>
+              <div className="text-xl md:text-3xl mb-1">⚡</div>
+              <p className="text-xs md:text-sm">Fast Delivery</p>
+            </div>
 
+            <div>
+              <div className="text-xl md:text-3xl mb-1">👨‍💻</div>
+              <p className="text-xs md:text-sm">Support</p>
+            </div>
 
-  {/* FEATURES */}
-  <div className="flex gap-10 text-center">
-
-    {/* Authentic */}
-    <div className="text-white">
-      <div className="text-3xl mb-2">✔</div>
-      <p className="text-sm">100% Authentic</p>
-    </div>
-
-    {/* Delivery */}
-    <div className="text-white">
-      <div className="text-3xl mb-2">⚡</div>
-      <p className="text-sm">Fast Delivery</p>
-    </div>
-
-    {/* Support */}
-    <div className="text-white">
-      <div className="text-3xl mb-2">👨‍💻</div>
-      <p className="text-sm">Friendly Support</p>
-    </div>
-
-  </div>
-
-</div>
+          </div>
+        </div>
 
         {/* RIGHT TEXT */}
-        <div className="text-right max-w-lg">
+        <div className="text-center md:text-right max-w-md">
 
-          <h3 className="text-xl mb-2">
+          <h3 className="text-sm md:text-xl mb-2">
             {slides[current].title}
           </h3>
 
-          <h1 className="text-6xl font-bold leading-tight">
+          <h1 className="text-3xl md:text-6xl font-bold leading-tight">
             {slides[current].heading}
           </h1>
 
-          <p className="text-lg mb-6">
+          <p className="text-sm md:text-lg mb-4 md:mb-6">
             {slides[current].subtitle}
           </p>
 
-          <button className="bg-red-600 px-10 py-3 rounded-full text-lg hover:bg-red-700 transition">
+          <button className="bg-red-600 px-6 py-2 md:px-10 md:py-3 rounded-full text-sm md:text-lg hover:bg-red-700 transition">
             Shop Now
           </button>
 
@@ -176,14 +150,14 @@ const HeroSlider = () => {
       {/* Arrows */}
       <button
         onClick={prevSlide}
-        className="absolute left-5 top-1/2 -translate-y-1/2 bg-white/20 px-3 py-2 rounded"
+        className="absolute left-3 md:left-5 top-1/2 -translate-y-1/2 bg-white/20 px-2 py-1 md:px-3 md:py-2 rounded"
       >
         ❮
       </button>
 
       <button
         onClick={nextSlide}
-        className="absolute right-5 top-1/2 -translate-y-1/2 bg-white/20 px-3 py-2 rounded"
+        className="absolute right-3 md:right-5 top-1/2 -translate-y-1/2 bg-white/20 px-2 py-1 md:px-3 md:py-2 rounded"
       >
         ❯
       </button>
@@ -194,7 +168,7 @@ const HeroSlider = () => {
           <div
             key={slide.id}
             onClick={() => setCurrent(index)}
-            className={`h-3 w-3 rounded-full cursor-pointer ${
+            className={`h-2 w-2 md:h-3 md:w-3 rounded-full cursor-pointer ${
               current === index ? "bg-white" : "bg-gray-400"
             }`}
           ></div>
