@@ -5,7 +5,7 @@ import { RouterProvider } from 'react-router-dom';
 import { router } from './Routes';
 import { CartProvider } from './Contex/CartContext';
 import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';   // ✅ Add this line
+import 'react-toastify/dist/ReactToastify.css';  
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -22,9 +22,7 @@ createRoot(document.getElementById('root')).render(
         pauseOnFocusLoss 
         draggable 
         pauseOnHover
-        theme="light"
-        
-        />
+        theme="light"/>
         
   </StrictMode>
 );

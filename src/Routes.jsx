@@ -10,13 +10,14 @@ import Cart from "./Pages/Cart";
 import Profile from "./Pages/Profile";
 import ProductDetails from "./Pages/ProductDetails";
 import LoginForm from "./Pages/LoginForm";
+import TopUp from "./Pages/TopUp";
 
 export const router =createBrowserRouter([
    
     {
         path:'/',
         
-        element:<> <MainLayout/>,<ScrollToTop/></>,
+        element:<> <MainLayout/><ScrollToTop/></>,
         children:[
 
             {
@@ -56,6 +57,10 @@ export const router =createBrowserRouter([
             {
                 path:'login',
                 element:<LoginForm/>
+            },
+            {
+                path:'topup',
+                element:<TopUp/>
             }
 
         ]

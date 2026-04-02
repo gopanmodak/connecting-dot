@@ -1,8 +1,5 @@
 import React from "react";
 import { FaCalendarAlt } from "react-icons/fa";
-import rightArrow from "../assets/guidance_down-arrow.svg";
-import heroBanner from "../assets/heroBanner.png";
-import bannerImages from "../assets/bannerImage.png";
 import Hero from "../Components/Hero";
 import LearnWhy from "../Components/LearnWhy ";
 import WhatWeOffer from "../Components/WhatWeOffer";

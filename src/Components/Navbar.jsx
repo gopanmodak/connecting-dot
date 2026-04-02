@@ -31,6 +31,7 @@ const Navbar = () => {
           <NavLink to="/" className={navStyle}>Home</NavLink>
           <NavLink to="/shop" className={navStyle}>Shop</NavLink>
           <NavLink to="/contact" className={navStyle}>Contact Us</NavLink>
+          <NavLink to="/topup" className={navStyle}>TopUp</NavLink>
         </div>
 
         {/* Right Side Icons & CTA */}
@@ -69,6 +70,7 @@ const Navbar = () => {
           <NavLink to="/" onClick={() => setOpen(false)} className={navStyle}>Home</NavLink>
           <NavLink to="/shop" onClick={() => setOpen(false)} className={navStyle}>Shop</NavLink>
           <NavLink to="/contact" onClick={() => setOpen(false)} className={navStyle}>Contact Us</NavLink>
+          <NavLink to="/topup" onClick={() => setOpen(false)} className={navStyle}>TopUp</NavLink>
           
           
         </div>
