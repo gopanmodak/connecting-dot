@@ -8,7 +8,7 @@ const Footer = () => {
       {/* Background Gradient Effect */}
       <div className="absolute bottom-0 left-0 w-full h-100 bg-linear-to-t from-[#2a003a] via-transparent to-transparent opacity-60 pointer-events-none"></div>
 
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="max-w-6xl mx-auto relative z-10">
         {/* Footer Navigation Links */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 pb-16">
           {/* Engagement Models */}

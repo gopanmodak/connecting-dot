@@ -5,7 +5,7 @@ import logo from "../assets/Logo (1).png";
 const FullSection = () => {
   return (
     <footer className="bg-black text-white py-20 px-6 md:px-16">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12 mb-20">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12 mb-20">
         
         {/* Left Side: Text and Talk Button */}
         <div>
